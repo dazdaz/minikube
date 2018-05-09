@@ -18,7 +18,7 @@ minikube delete
 * https://github.com/kubernetes/minikube/releases and download : minikube-installer.exe
 
 ```
-minikube start --vm-driver=hyperv --kubernetes-version="v1.6..0"
+minikube start --vm-driver=hyperv --kubernetes-version="v1.8.2"
 kubectl get nodes
 minikube dashboard
 ```
