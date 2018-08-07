@@ -23,5 +23,11 @@ kubectl get nodes
 minikube dashboard
 ```
 
+```
+kubectl run hello-minikube --image=gcr.io/google_containers/echoserver:1.4 --port=8080
+kubectl expose deployment --type=NodePort
+minikube service hello-minikube --url
+```
+
 ## Links
 * https://github.com/kubernetes/minikube
