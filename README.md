@@ -20,7 +20,10 @@ minikube delete
 ```
 minikube start --vm-driver=hyperv --kubernetes-version="v1.8.2"
 kubectl get nodes
+# launch dashboard
 minikube dashboard
+# view dashboard url
+minikube dashboard --url
 ```
 
 ```
