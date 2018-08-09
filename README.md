@@ -24,6 +24,8 @@ kubectl get nodes
 minikube dashboard
 # view dashboard url
 minikube dashboard --url
+# Show IP of cluster
+minikube ip
 ```
 
 ```
