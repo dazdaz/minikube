@@ -4,7 +4,15 @@ brew install kubectl
 brew cask install minikube
 # replace virtualbox with xhyve
 brew install docker-machine-driver-xhyve
+
 minikube start --vm-driver=xhyve --kubernetes-version="v1.8.2"
+
+minikube start \
+  --memory 8096 \
+  --extra-config=controller-manager.horizontal-pod-autoscaler-upscale-delay=1m \
+  --extra-config=controller-manager.horizontal-pod-autoscaler-downscale-delay=2m \
+  --extra-config=controller-manager.horizontal-pod-autoscaler-sync-period=10s
+
 kubectl get nodes
 ```
 
