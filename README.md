@@ -13,6 +13,8 @@ minikube start \
   --extra-config=controller-manager.horizontal-pod-autoscaler-downscale-delay=2m \
   --extra-config=controller-manager.horizontal-pod-autoscaler-sync-period=10s
 
+minikube start --extra-config=apiserver.Authorization.Mode=RBAC
+
 kubectl get nodes
 ```
 
