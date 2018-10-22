@@ -1,4 +1,4 @@
-## Deploying minikube on MacOSx
+## Deploying minikube on macOS
 ```
 brew install kubectl
 brew cask install minikube
@@ -44,7 +44,7 @@ kubectl expose deployment --type=NodePort
 minikube service hello-minikube --url
 ```
 
-## Deploy knative
+## Deploy knative on macOS
 ```
 brew install starkandwayne/kubernetes/knctl
 knctl install --node-ports --exclude-monitoring
