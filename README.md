@@ -44,5 +44,23 @@ kubectl expose deployment --type=NodePort
 minikube service hello-minikube --url
 ```
 
+## Deploy knative
+```
+brew install starkandwayne/kubernetes/knctl
+knctl install --node-ports --exclude-monitoring
+```
+
+## Deploy an existing public Docker image as an autoscaling stateless application to Knative, in your current Kubernetes namespace:
+```
+knctl namespace create -n helloworld
+knctl deploy \
+      --namespace helloworld \
+      --service hello \
+      --image gcr.io/knative-samples/helloworld-go \
+      --env TARGET=Rev1
+```
+* https://starkandwayne.com/blog/deploying-12factor-apps-to-knative/
+
+
 ## Links
 * https://github.com/kubernetes/minikube
