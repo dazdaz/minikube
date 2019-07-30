@@ -15,6 +15,9 @@ minikube start \
 
 minikube start --extra-config=apiserver.Authorization.Mode=RBAC
 
+# https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/
+minikube start --extra-config="kubelet.allowed-unsafe-sysctls=kernel.msg*,net.core.somaxconn"...
+
 kubectl get nodes
 ```
 
