@@ -1,7 +1,7 @@
 ## Deploying minikube on macOS
 ```
 brew install kubectl
-brew cask install minikube
+brew install cask minikube
 # replace virtualbox with xhyve
 brew install docker-machine-driver-xhyve
 
